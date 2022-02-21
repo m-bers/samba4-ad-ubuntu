@@ -14,7 +14,7 @@ sudo apt-get dist-upgrade
 
 Usually, common modern Linux file systems such as ext3, ext4, xfs or btrfs support and have ACLs enabled by default. If that’s not the case with your file system just open /etc/fstab file for editing and add acl string at the end of third column and reboot the machine in order to apply changes.
 ```
-/dev/disk/by-uuid/<SOME_UUID> / ext4 defaults,==acl== 0 1
+/dev/disk/by-uuid/<SOME_UUID> / ext4 defaults,acl 0 1
 /swap.img	none	swap	sw	0	0
 ```
 3. Finally setup your machine hostname with a descriptive name, such as adc1 used in this example, by editing /etc/hostname file or by issuing.
